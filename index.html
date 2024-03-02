@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      :root {
+    --variable-name: value;
+  }
+  selector {
+    property: var(--variable-name);
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
+}
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+.hero img {
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+.more-about {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p {
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 21.875rem;
+  padding: 1rem;
+}
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  line-height: var(--line-height);
+}
+
+.contact-info a {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-info a:hover {
+  color: var(--secondary-color);
+}
+
+.resume-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+.resume-link:hover {
+  color: var(--secondary-color);
+}
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
+    </style>
+    <title>Nosheen Mumtaz | Web Developer</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <h1>Nosheen Mumtaz</h1>
+      <ul class="navigation">
+        <li><a href="#about" class="nav-link">About</a></li> 
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <img
+        src="Portfolio.jpg"
+        alt="nosheenmumtaz"
+        loading="lazy"
+        class="hero-img"
+      />
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-title">About Me</h2>
+        <p class="bio-text">
+          Hello there! I'm Nosheen Mumtaz, a passionate and driven individual currently in the final year of my BSc in Computer Science at the University of Debrecen, Hungary. At 23, I'm fueled by a deep curiosity for technology and its endless possibilities.
+I'm currently delving into the world of web development through an exciting internship at Codsoft. Here, I'm honing my skills and gaining practical experience in crafting dynamic and user-friendly websites. Every day presents new challenges and learning opportunities, and I thrive in this dynamic environment.
+        </p>
+      </div>
+</section>
+<!---more about me-->
+<section class="more-about">
+  <h2>More About Me</h2>
+  <p>
+    In addition to my internship, I'm also dedicated to expanding my knowledge through courses like the Meta Front End Development course on Coursera. This online learning platform provides me with invaluable insights into the latest trends and techniques in front-end development, empowering me to stay ahead in this rapidly evolving field.
+Combining my academic pursuits with real-world experience, I aspire to make meaningful contributions to the ever-evolving landscape of technology. 
+  <p>
+    With a strong foundation in computer science and a hunger for growth, I'm ready to take on new challenges and create innovative solutions that make a difference.
+Outside of the digital realm, you can find me exploring new cuisines, immersing myself in nature, or engaging in stimulating conversations about anything from philosophy to pop culture. Life is an adventure, and I'm eager to embrace every moment of it.
+Join me on this journey as we navigate the exciting intersection of technology, creativity, and human connection. Let's build something extraordinary together!
+  </p>
+
+</section>
+    <!--skills section-->
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+      <h2 class="projects-title">Some of my Recent Projects</h2>
+      <div class="projects-container">
+        <div class="project-container project-card">
+          <img
+            src="SurveyForm.jpg"
+            alt="Survey Form"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Survey Form</h3>
+          <p class="project-details">
+            The Survey Form HTML & CSS project demonstrates my expertise in front-end web development, showcasing a visually appealing and user-friendly interface for collecting feedback. With structured HTML elements and customized CSS styling, the form ensures seamless responsiveness across devices. 
+            Validation techniques guarantee data integrity, underscoring my commitment to user-centric design and functionality.
+          </p>
+          <a href="https://github.com/NosheenMumtaz/Portfolio/blob/main/SurveyForm.html" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="Tribute.jpg"
+            alt="Tribute Page"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Tribute Page</h3>
+          <p class="project-details">
+            The Tribute Page project showcases my ability to create a succinct and visually captivating homage to a notable individual or topic. 
+            Through carefully curated content and elegant design, this project pays tribute to its subject matter, highlighting key achievements and contributions.
+          </p>
+          <a href="https://github.com/NosheenMumtaz/Portfolio/blob/main/Tribute.html" target="_blank" class="project-link">Check it Out</a>
+        </div>
+        <div class="project-container project-card">
+          <img
+            src="LandingPage.jpg"
+            alt="Landing Page"
+            loading="lazy"
+            class="project-pic"
+          />
+          <h3 class="project-title">Landing Page</h3>
+          <p class="project-details">
+            The Landing Page project exemplifies my skill in crafting engaging and conversion-focused web interfaces. 
+            With strategic layout design and compelling visuals, this page serves as a gateway to captivate visitors and prompt action, whether it be signing up for a service, making a purchase, or exploring further content.
+          </p>
+          <a href="https://github.com/NosheenMumtaz/Portfolio/blob/main/LandingPage.html" target="_blank" class="project-link">Check it Out</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p>Email: nosheenmumtaz18@gmail.com</p>
+        <p>Phone: +36704286655</p>
+        <a href="CV.pdf" class="resume-link" target="_blank">Download CV</a>
+      </div>
+    </section>
+    <!-- Scroll to top -->
+    <i class="scroll-up" id="scroll-up"
+    ><img
+      src="up-arrow.gif"
+      class="socicon up-arrow"
+      alt="scroll-up"
+  /></i>
+    <!-- Footer section -->
+    <footer>
+      <p class="copy">&copy; Copyright 2024</p>
+      <p class="copy">
+        Built with &#x2661; by
+        <a href="https://instagram.com/nosheenmumtaz18" target="_blank"
+          >Nosheen Mumtaz (Ksound)</a
+        >
+      </p>
+</footer>
+    <!-- Website scripts -->
+    <script>
+        // scroll to top functionality
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+    </script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
